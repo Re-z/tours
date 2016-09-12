@@ -1,0 +1,190 @@
+extends _layout
+block title
+	title Tours
+
+block content
+	//start header
+	header.header
+		img(class="logo" src="img/logo.png" alt="logotype")
+		nav: ul.nav
+				li.nav__item
+					a.nav__link.holidays.is-active(href="#") Holidays
+				li.nav__item.cruises
+					a.nav__link.cruises(href="#") Cruises
+				li.nav__item
+					a.nav__link.flights(href="#") Flights
+				li.nav__item
+					a.nav__link.deals(href="#") Deals
+				li.nav__item
+					a.nav__link.destinations(href="#") Destinations
+				li.nav__item
+					a.nav__link.estras(href="#") Estras
+
+		.search-wrap
+			.search(role="img")
+			.profile(role="img")
+	//end header
+	//start country
+	section.country
+		.country__inner
+			h3.country__name Greece
+			//adding tablist
+			ul.country__offers(role="tablist")
+					- var offers = ['tours', 'hotels', 'flights', 'cars', 'cruise']
+						each offer, index in offers
+							if index === 0
+								li.country__offers-item.is-active(role="tab")
+									a.country__offers-link(href="#")=offer
+							else
+								li.country__offers-item(role="tab")
+									a.country__offers-link(href="#")=offer
+
+			.saved
+				span.saved__ico(role="img")
+				p.saved__text 1 Holidays shortlisted
+	//end country
+	//start searchbar
+	section.searchbar
+		.searchbar__inner
+			.searchbar__from
+				span.js-text-holder London
+				select.searchbar__select
+					option.searchbar__option(selected) London
+					option.searchbar__option Paris
+					option.searchbar__option Kyiv
+					option.searchbar__option Moscow
+			.searchbar__to
+				span.js-text-holder Greece
+				select.searchbar__select
+					option.searchbar__option(selected) Greece
+					option.searchbar__option Ukraine
+					option.searchbar__option Japan
+					option.searchbar__option USA
+
+			.searchbar__date
+					input(type="text" id="datepicker" value="09/13 /2015")
+			.searchbar__duration
+				span.js-text-holder 7 - 10 days
+				select.searchbar__select
+					option.searchbar__option(selected) 7 - 10 days
+					option.searchbar__option 8 - 12 days
+					option.searchbar__option 10 - 14 days
+					option.searchbar__option 12 - 16 days
+
+
+			button.searchbar__edit edit search
+	//end searchbar
+	//start main section
+	main.main
+		p.hint #[span SAVE AN EXTRA £100 PER FAMILY] ON SUMMER 2016 HOLIDAYS TO TURKEY. #[span USE CODE TURK25] (UPPERCASE).  MINIMUM SPEND OF £600 PER BOOKING. T&C'S APPLY.
+			i.hint__close
+		//start description
+		.main__inner
+			.description
+				//adding tablist
+				ul.description__tabs
+					- var tabs = ['overview', 'location', 'facilities', 'rooms', 'things to do']
+						each tab, index in tabs
+							if(index===0)
+								li.description__tabs-item.is-active(role="tab")
+									a.description__tabs-link(href='#')=tab
+							else
+								li.description__tabs-item(role="tab")
+									a.description__tabs-link(href='#')=tab
+				.save(role="button") save to shortlist
+				h3.box-title_hotel HOTEL LOUIS CORCYRA BEACH
+				//adding breadcrumbs
+				ul.breadcrumbs
+					- var breadcrumbs = ['Destionations', 'Greece', 'Ionian Islands', 'Corfu', 'Gouvia', 'Hotel Louis Corcyra Beach']
+						each crumb in breadcrumbs
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="#")=crumb
+				//start sliders
+				.slider-main__wrap
+					.slider-main
+						- var sliderMain = ['slider-main1', 'slider-main2', 'slider-main3', 'slider-main4', 'slider-main5']
+							each slide in sliderMain
+								img( class="slider-main__item" src='img/#{slide}.png' alt="description")
+
+				//second slider
+				.slider-sec__wrap
+					.slider-sec
+						- var sliderSec = ['slider-sec1', 'slider-sec2', 'slider-sec3', 'slider-sec4', 'slider-sec5', 'slider-sec6', 'slider-sec7', 'slider-sec8', 'slider-sec1', 'slider-sec4']
+							each slide in sliderSec
+								img(class="slider-sec__item" src='img/#{slide}.png' alt='description')
+				.description__text-wrap
+					h5.description__text-title This place is right on the beach, and it’s just a 5-minute walk from Gouvia’s bars and shops.
+					p.description__text The Louis Corcyra Beach has an Asian restaurant and an international buffet place that was completely renovated in 2011. On the pools front, there’s a big lagoon number with a handy snack bar.
+					p.description__text The hotel is nestled on a hillside among gardens. It’s just a flight of steps from a pebble beach, dotted with sunloungers and palapas. And Gouvia’s lively centre is just a five-minute walk.
+					.media
+						a.media__gallery(href="#") View gallery
+						a.media__video(href="#") Watch video
+				//add google map
+				#map
+				section.facilities
+					h6.section-title facilities
+						a.section-title__more(href='#') View all
+					.articles-wrap
+						article.article
+							img.article__img(src="img/facilities1.png")
+							h6.article__title DIVAN BUFFET RESTAURANT
+							p.article__text The buffet restaurant serves up dishes from around the world for breakfast, lunch and dinner. Gentlemen are asked to wear smart shorts or long trousers, smart polo or tee shirts and closed shoes in the evenings.Highchairs are available.
+						article.article
+							img.article__img(src="img/facilities2.png")
+							h6.article__title OUTDOOR POOL
+							p.article__text With sunbeds, parasols and views of the beautiful, well kept gardens.
+						article.article
+							img.article__img(src="img/facilities3.png")
+							h6.article__title PLAY HOUSE CHILDREN'S CLUB
+							p.article__text At the Play House, daytime activities are anything but ordinary thanks to the Silly Science Lab, Crazy Kitchen and the Arts and Crafts Zone. Evenings, meanwhile, bring parties and movies, plus you can pay a little extra for sleepovers. Finally, because all staff hold UK-accredited childcare qualifications, you're guaranteed peace of mind. Free supervised sessions for 3 to 12 year-olds are available 6 days a week for an hour or two. Also, you can use the facilities as a family with our special ‘stay and play’ sessions, available 7 days a week.
+						article.article
+							img.article__img(src="img/facilities4.png")
+							h6.article__title Aqua aerobics
+							p.article__text Aqua Aerobics classes offer you something different to a traditional gym workout and you’ll really see a difference in your overall health and fitness.
+							p.article__text.margin_20 Typical Aqua Aerobics classes will involve all the exercises you would expect in a ‘dry’ class but with added bonuses you can only get from exercising in water.
+				section.rooms
+					h6.section-title rooms
+						a.section-title__more(href='#') View all
+					.articles-wrap
+						article.article
+							img.article__img(src="img/rooms1.png")
+							h6.article__title DOUBLE ROOM WITH WHIRLPOOL
+							p.article__text Double room with whirlpool sleeps 2. Available in the adult and family sections of the hotel, these come with a whirlpool bath on the balcony. With an iPod docking station, kettle, and an iron and board.
+						article.article
+							img.article__img(src="img/rooms2.png")
+							h6.article__title DOUBLE ROOM WITH SEA VIEW - ADULT SECTION
+							p.article__text Double room with sea view sleeps 2 with a double bed, a plasma screen TV, an iPod docking station, kettle, and an iron and board. Located in the adults-only section.
+				section.to-do
+					h6.section-title things to do
+						a.section-title__more(href='#') View all
+					.articles-wrap
+						article.article
+							img.article__img(src="img/to-do1.png")
+							h6.article__title_to-do Festa Da Pinha
+							p.article__text Otherwise known as the pine-cone festival, this centuries-old celebration sees crowds gather in Estoi’s streets to cheeron…
+							a.article__more(href="#" title="read more") read more
+						article.article
+							img.article__img(src="img/to-do2.png")
+							h6.article__title_to-do Have a night out in Faro
+							p.article__text Estoi is a quiet village, which is reflected in its nightlife. You can sip a glass of port in one of the hotel bars or, for…
+							a.article__more(href="#" title="read more") read more
+						article.article
+							img.article__img(src="img/to-do3.png")
+							h6.article__title_to-do Monte Do Casal, Cerro Do Lobo
+							p.article__text This gourmet restaurant is part of a luxury boutique hotel, so it isn’t the cheapest in town. But its lovely vine-clad terrace,…
+							a.article__more(href="#" title="read more") read more
+						article.article
+							img.article__img(src="img/to-do4.png")
+							h6.article__title_to-do Try a new watersport on Praia De Faro
+							p.article__text You’ve got the full choice of watersports on the beach, including windsurfing, sailing and jetskiing. And if that buildsan…
+							a.article__more(href="#" title="read more") read more
+			include _aside.jade
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+footer.footer
+   .footer__inner
+      .footer__logo-wrap
+         img.logo_footer(src="img/logo_footer.png")
+         p.footer__text Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit aadipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      .footer__section_about
+         h6.footer__title about us
+         ul.footer__about
+            - var footerAbout = ['About Us', 'Privacy Policy', 'Contact Us', 'FAQs', 'Terms of Business', 'Sitemap', 'Jobs', 'Holiday Extras']
+               each item in footerAbout
+                  li.footer__item
+                     a.footer__link(href="#")=item
+      .footer__section_holidays
+         h6.footer__title holidays
+         ul.footer__holidays
+            - var footerHolidays = ['All Inclusive Holidays', 'Cheap Holidays', 'Family Holidays', 'Last Minute Holidays', 'Luxury Holidays', 'Summer Holidays', 'Winter Sun Holidays', 'Self Catering Holidays']
+            each item in footerHolidays
+               li.footer__item
+                  a.footer__link(href="#")=item
+      .footer__section_destinations
+         h6.footer__title top destinations
+         ul.footer__holidays
+            - var footerDestinations = ['Costa Dorada', 'Dalaman', 'Fuerteventura', 'Gran Canaria', 'Ibiza', 'Lanzarote', 'Majorca', 'Malta']
+            each item in footerDestinations
+               li.footer__item
+                  a.footer__link(href="#")=item
+      .footer__section_follow
+         h6.footer__title follow us
+         p.footer__text Connect with us for exclusive content, competitions and holiday inspiration
+         ul.socials
+            - var socials = ['fb', 'tw', 'goo', 'yt']
+               each icon in socials
+                  li.socials__item
+                     a(href="#" class='socials__link_#{icon}')
+footer.copyrights
+   .copyrights__inner
+      p.copyrights__text © 2015 Tours4you. All Rights Reserved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

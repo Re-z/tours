@@ -1,0 +1,87 @@
+aside.aside
+      .all-inclusive
+         .all-inclusive__text-wrap
+            p.all-inclusive__text All inclusive from
+            span.all-inclusive__price £ 1,392 #[span pp]
+         a.check-prices(href="#" title="check prices") check prices
+      .offer
+         header.offer__header
+            p.offer__item.calendar Sun 14 Aug 2015 - #[span 10 nights]
+            p.offer__item.plane London Gatwick - Corfu
+               a.offer__link Flight Details
+            p.offer__item.bed Bungalow With Garden View
+               a.offer__link Only 1 Room Left
+            p.offer__item.food All Inclusive
+               a.offer__link More board option
+                  i(class="offer__link-arrow fa fa-angle-down" aria-hidden="true")
+            span.easy-jet
+
+         .offer__argument
+            h6.offer__argument-title AT A GLANCE
+            ul.offer__glance
+               - var glance = ["On the beach", "Lagoon pool", "Thomson Kid`s Club" ]
+                  each item in glance
+                     i(class="fa fa-angle-right offer__glance-ico" aria-hidden="true")
+                     li.offer__glance-item=item
+                     br
+            h6.offer__argument-title LOCATION
+            ul.offer__location
+               - var location = ['On a manmade beach', '100m from the centre of Gouvia with its bars, cafés and restaurants', 'Golf course 15km away', 'Horse riding nearby']
+                  each item in location
+                     i(class="fa fa-angle-right offer__location-ico" aria-hidden="true")
+                     li.offer__location-item=item
+                     br
+            h6.offer__argument-title SHARE
+            ul.socials.socials_aside
+               - var socials = ['fb', 'tw', 'goo', 'yt']
+               each icon in socials
+                  li.socials__item.socials__item_aside
+                     a(href="#" class='socials__link_aside socials__link_#{icon}')
+      .weather(role="img")
+      .help
+         p.help__text need help?
+         p.help__phone #[span Call:] 0203 451 2688
+      section.hot
+         h6.section-title hot tours
+         article.hot__offer
+            img.hot__offer-img(src="img/aside1.png")
+            h6.hot__offer-title.stars-4 Mandisur Apartments
+            p.hot__where in Sharm El Sheikh, Egypt
+            p.hot__food SELF CATERING FROM
+            p.hot__price £ 306 #[span pp]
+               a.hot__offer-more(href="#" title="view more") View details
+         article.hot__offer
+            img.hot__offer-img(src="img/aside2.png")
+            h6.hot__offer-title.stars-5 The Hyatt Regency Sharm El Sheikh
+            p.hot__where in Sharm El Sheikh, Egypt
+            p.hot__food BED AND BREAKFAST FROM
+            p.hot__price £ 427 #[span pp]
+               a.hot__offer-more(href="#" title="view more") View details
+         article.hot__offer
+            img.hot__offer-img(src="img/aside3.png")
+            h6.hot__offer-title.stars-5 Gran Hotel Bahia Del Duque
+            p.hot__where in Costa Adeje, Spain
+            p.hot__food BED AND BREAKFAST FROM
+            p.hot__price £ 494 #[span pp]
+               a.hot__offer-more(href="#" title="view more") View details
+         a.hot__view-all(href="#") view all hot tours
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

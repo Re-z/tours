@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tours</title>
+    <!--meta(name="viewport" content="width=device-width, initial-scale=1")-->
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/style.css"><link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" media="all" href="css/jquery-ui.css">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.structure">
+  </head>
+  <link rel="stylesheet" media="all" href="css/jquery-ui.theme.css">
+  <body>
+    <!--start header-->
+    <header class="header"><img src="img/logo.png" alt="logotype" class="logo">
+      <nav>
+        <ul class="nav">
+          <li class="nav__item"><a href="#" class="nav__link holidays is-active">Holidays</a></li>
+          <li class="nav__item cruises"><a href="#" class="nav__link cruises">Cruises</a></li>
+          <li class="nav__item"><a href="#" class="nav__link flights">Flights</a></li>
+          <li class="nav__item"><a href="#" class="nav__link deals">Deals</a></li>
+          <li class="nav__item"><a href="#" class="nav__link destinations">Destinations</a></li>
+          <li class="nav__item"><a href="#" class="nav__link estras">Estras</a></li>
+        </ul>
+      </nav>
+      <div class="search-wrap">
+        <div role="img" class="search"></div>
+        <div role="img" class="profile"></div>
+      </div>
+    </header>
+    <!--end header-->
+    <!--start country-->
+    <section class="country">
+      <div class="country__inner">
+        <h3 class="country__name">Greece</h3>
+        <!--adding tablist-->
+        <ul role="tablist" class="country__offers">
+          <li role="tab" class="country__offers-item is-active"><a href="#" class="country__offers-link">tours</a></li>
+          <li role="tab" class="country__offers-item"><a href="#" class="country__offers-link">hotels</a></li>
+          <li role="tab" class="country__offers-item"><a href="#" class="country__offers-link">flights</a></li>
+          <li role="tab" class="country__offers-item"><a href="#" class="country__offers-link">cars</a></li>
+          <li role="tab" class="country__offers-item"><a href="#" class="country__offers-link">cruise</a></li>
+        </ul>
+        <div class="saved"><span role="img" class="saved__ico"></span>
+          <p class="saved__text">1 Holidays shortlisted</p>
+        </div>
+      </div>
+    </section>
+    <!--end country-->
+    <!--start searchbar-->
+    <section class="searchbar">
+      <div class="searchbar__inner">
+        <div class="searchbar__from"><span class="js-text-holder">London</span>
+          <select class="searchbar__select">
+            <option selected class="searchbar__option">London</option>
+            <option class="searchbar__option">Paris</option>
+            <option class="searchbar__option">Kyiv</option>
+            <option class="searchbar__option">Moscow</option>
+          </select>
+        </div>
+        <div class="searchbar__to"><span class="js-text-holder">Greece</span>
+          <select class="searchbar__select">
+            <option selected class="searchbar__option">Greece</option>
+            <option class="searchbar__option">Ukraine</option>
+            <option class="searchbar__option">Japan</option>
+            <option class="searchbar__option">USA</option>
+          </select>
+        </div>
+        <div class="searchbar__date">
+          <input type="text" id="datepicker" value="09/13 /2015">
+        </div>
+        <div class="searchbar__duration"><span class="js-text-holder">7 - 10 days</span>
+          <select class="searchbar__select">
+            <option selected class="searchbar__option">7 - 10 days</option>
+            <option class="searchbar__option">8 - 12 days</option>
+            <option class="searchbar__option">10 - 14 days</option>
+            <option class="searchbar__option">12 - 16 days</option>
+          </select>
+        </div>
+        <button class="searchbar__edit">edit search</button>
+      </div>
+    </section>
+    <!--end searchbar-->
+    <!--start main section-->
+    <main class="main">
+      <p class="hint"><span>SAVE AN EXTRA £100 PER FAMILY</span> ON SUMMER 2016 HOLIDAYS TO TURKEY. <span>USE CODE TURK25</span> (UPPERCASE).  MINIMUM SPEND OF £600 PER BOOKING. T&C'S APPLY.<i class="hint__close"></i></p>
+      <!--start description-->
+      <div class="main__inner">
+        <div class="description">
+          <!--adding tablist-->
+          <ul class="description__tabs">
+            <li role="tab" class="description__tabs-item is-active"><a href="#" class="description__tabs-link">overview</a></li>
+            <li role="tab" class="description__tabs-item"><a href="#" class="description__tabs-link">location</a></li>
+            <li role="tab" class="description__tabs-item"><a href="#" class="description__tabs-link">facilities</a></li>
+            <li role="tab" class="description__tabs-item"><a href="#" class="description__tabs-link">rooms</a></li>
+            <li role="tab" class="description__tabs-item"><a href="#" class="description__tabs-link">things to do</a></li>
+          </ul>
+          <div role="button" class="save">save to shortlist</div>
+          <h3 class="box-title_hotel">HOTEL LOUIS CORCYRA BEACH</h3>
+          <!--adding breadcrumbs-->
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Destionations</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Greece</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Ionian Islands</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Corfu</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Gouvia</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Hotel Louis Corcyra Beach</a></li>
+          </ul>
+          <!--start sliders-->
+          <div class="slider-main__wrap">
+            <div class="slider-main"><img src="img/slider-main1.png" alt="description" class="slider-main__item"><img src="img/slider-main2.png" alt="description" class="slider-main__item"><img src="img/slider-main3.png" alt="description" class="slider-main__item"><img src="img/slider-main4.png" alt="description" class="slider-main__item"><img src="img/slider-main5.png" alt="description" class="slider-main__item">
+            </div>
+          </div>
+          <!--second slider-->
+          <div class="slider-sec__wrap">
+            <div class="slider-sec"><img src="img/slider-sec1.png" alt="description" class="slider-sec__item"><img src="img/slider-sec2.png" alt="description" class="slider-sec__item"><img src="img/slider-sec3.png" alt="description" class="slider-sec__item"><img src="img/slider-sec4.png" alt="description" class="slider-sec__item"><img src="img/slider-sec5.png" alt="description" class="slider-sec__item"><img src="img/slider-sec6.png" alt="description" class="slider-sec__item"><img src="img/slider-sec7.png" alt="description" class="slider-sec__item"><img src="img/slider-sec8.png" alt="description" class="slider-sec__item"><img src="img/slider-sec1.png" alt="description" class="slider-sec__item"><img src="img/slider-sec4.png" alt="description" class="slider-sec__item">
+            </div>
+          </div>
+          <div class="description__text-wrap">
+            <h5 class="description__text-title">This place is right on the beach, and it’s just a 5-minute walk from Gouvia’s bars and shops.</h5>
+            <p class="description__text">The Louis Corcyra Beach has an Asian restaurant and an international buffet place that was completely renovated in 2011. On the pools front, there’s a big lagoon number with a handy snack bar.</p>
+            <p class="description__text">The hotel is nestled on a hillside among gardens. It’s just a flight of steps from a pebble beach, dotted with sunloungers and palapas. And Gouvia’s lively centre is just a five-minute walk.</p>
+            <div class="media"><a href="#" class="media__gallery">View gallery</a><a href="#" class="media__video">Watch video</a></div>
+          </div>
+          <!--add google map-->
+          <div id="map"></div>
+          <section class="facilities">
+            <h6 class="section-title">facilities<a href="#" class="section-title__more">View all</a></h6>
+            <div class="articles-wrap">
+              <article class="article"><img src="img/facilities1.png" class="article__img">
+                <h6 class="article__title">DIVAN BUFFET RESTAURANT</h6>
+                <p class="article__text">The buffet restaurant serves up dishes from around the world for breakfast, lunch and dinner. Gentlemen are asked to wear smart shorts or long trousers, smart polo or tee shirts and closed shoes in the evenings.Highchairs are available.</p>
+              </article>
+              <article class="article"><img src="img/facilities2.png" class="article__img">
+                <h6 class="article__title">OUTDOOR POOL</h6>
+                <p class="article__text">With sunbeds, parasols and views of the beautiful, well kept gardens.</p>
+              </article>
+              <article class="article"><img src="img/facilities3.png" class="article__img">
+                <h6 class="article__title">PLAY HOUSE CHILDREN'S CLUB</h6>
+                <p class="article__text">At the Play House, daytime activities are anything but ordinary thanks to the Silly Science Lab, Crazy Kitchen and the Arts and Crafts Zone. Evenings, meanwhile, bring parties and movies, plus you can pay a little extra for sleepovers. Finally, because all staff hold UK-accredited childcare qualifications, you're guaranteed peace of mind. Free supervised sessions for 3 to 12 year-olds are available 6 days a week for an hour or two. Also, you can use the facilities as a family with our special ‘stay and play’ sessions, available 7 days a week.</p>
+              </article>
+              <article class="article"><img src="img/facilities4.png" class="article__img">
+                <h6 class="article__title">Aqua aerobics</h6>
+                <p class="article__text">Aqua Aerobics classes offer you something different to a traditional gym workout and you’ll really see a difference in your overall health and fitness.</p>
+                <p class="article__text margin_20">Typical Aqua Aerobics classes will involve all the exercises you would expect in a ‘dry’ class but with added bonuses you can only get from exercising in water.</p>
+              </article>
+            </div>
+          </section>
+          <section class="rooms">
+            <h6 class="section-title">rooms<a href="#" class="section-title__more">View all</a></h6>
+            <div class="articles-wrap">
+              <article class="article"><img src="img/rooms1.png" class="article__img">
+                <h6 class="article__title">DOUBLE ROOM WITH WHIRLPOOL</h6>
+                <p class="article__text">Double room with whirlpool sleeps 2. Available in the adult and family sections of the hotel, these come with a whirlpool bath on the balcony. With an iPod docking station, kettle, and an iron and board.</p>
+              </article>
+              <article class="article"><img src="img/rooms2.png" class="article__img">
+                <h6 class="article__title">DOUBLE ROOM WITH SEA VIEW - ADULT SECTION</h6>
+                <p class="article__text">Double room with sea view sleeps 2 with a double bed, a plasma screen TV, an iPod docking station, kettle, and an iron and board. Located in the adults-only section.</p>
+              </article>
+            </div>
+          </section>
+          <section class="to-do">
+            <h6 class="section-title">things to do<a href="#" class="section-title__more">View all</a></h6>
+            <div class="articles-wrap">
+              <article class="article"><img src="img/to-do1.png" class="article__img">
+                <h6 class="article__title_to-do">Festa Da Pinha</h6>
+                <p class="article__text">Otherwise known as the pine-cone festival, this centuries-old celebration sees crowds gather in Estoi’s streets to cheeron…</p><a href="#" title="read more" class="article__more">read more</a>
+              </article>
+              <article class="article"><img src="img/to-do2.png" class="article__img">
+                <h6 class="article__title_to-do">Have a night out in Faro</h6>
+                <p class="article__text">Estoi is a quiet village, which is reflected in its nightlife. You can sip a glass of port in one of the hotel bars or, for…</p><a href="#" title="read more" class="article__more">read more</a>
+              </article>
+              <article class="article"><img src="img/to-do3.png" class="article__img">
+                <h6 class="article__title_to-do">Monte Do Casal, Cerro Do Lobo</h6>
+                <p class="article__text">This gourmet restaurant is part of a luxury boutique hotel, so it isn’t the cheapest in town. But its lovely vine-clad terrace,…</p><a href="#" title="read more" class="article__more">read more</a>
+              </article>
+              <article class="article"><img src="img/to-do4.png" class="article__img">
+                <h6 class="article__title_to-do">Try a new watersport on Praia De Faro</h6>
+                <p class="article__text">You’ve got the full choice of watersports on the beach, including windsurfing, sailing and jetskiing. And if that buildsan…</p><a href="#" title="read more" class="article__more">read more</a>
+              </article>
+            </div>
+          </section>
+        </div>
+        <aside class="aside">
+          <div class="all-inclusive">
+            <div class="all-inclusive__text-wrap">
+              <p class="all-inclusive__text">All inclusive from</p><span class="all-inclusive__price">£ 1,392 <span>pp</span></span>
+            </div><a href="#" title="check prices" class="check-prices">check prices</a>
+          </div>
+          <div class="offer">
+            <header class="offer__header">
+              <p class="offer__item calendar">Sun 14 Aug 2015 - <span>10 nights</span></p>
+              <p class="offer__item plane">London Gatwick - Corfu<a class="offer__link">Flight Details</a></p>
+              <p class="offer__item bed">Bungalow With Garden View<a class="offer__link">Only 1 Room Left</a></p>
+              <p class="offer__item food">All Inclusive<a class="offer__link">More board option<i aria-hidden="true" class="offer__link-arrow fa fa-angle-down"></i></a></p><span class="easy-jet"></span>
+            </header>
+            <div class="offer__argument">
+              <h6 class="offer__argument-title">AT A GLANCE</h6>
+              <ul class="offer__glance"><i aria-hidden="true" class="fa fa-angle-right offer__glance-ico"></i>
+                <li class="offer__glance-item">On the beach</li><br><i aria-hidden="true" class="fa fa-angle-right offer__glance-ico"></i>
+                <li class="offer__glance-item">Lagoon pool</li><br><i aria-hidden="true" class="fa fa-angle-right offer__glance-ico"></i>
+                <li class="offer__glance-item">Thomson Kid`s Club</li><br>
+              </ul>
+              <h6 class="offer__argument-title">LOCATION</h6>
+              <ul class="offer__location"><i aria-hidden="true" class="fa fa-angle-right offer__location-ico"></i>
+                <li class="offer__location-item">On a manmade beach</li><br><i aria-hidden="true" class="fa fa-angle-right offer__location-ico"></i>
+                <li class="offer__location-item">100m from the centre of Gouvia with its bars, cafés and restaurants</li><br><i aria-hidden="true" class="fa fa-angle-right offer__location-ico"></i>
+                <li class="offer__location-item">Golf course 15km away</li><br><i aria-hidden="true" class="fa fa-angle-right offer__location-ico"></i>
+                <li class="offer__location-item">Horse riding nearby</li><br>
+              </ul>
+              <h6 class="offer__argument-title">SHARE</h6>
+              <ul class="socials socials_aside">
+                <li class="socials__item socials__item_aside"><a href="#" class="socials__link_aside socials__link_fb"></a></li>
+                <li class="socials__item socials__item_aside"><a href="#" class="socials__link_aside socials__link_tw"></a></li>
+                <li class="socials__item socials__item_aside"><a href="#" class="socials__link_aside socials__link_goo"></a></li>
+                <li class="socials__item socials__item_aside"><a href="#" class="socials__link_aside socials__link_yt"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div role="img" class="weather"></div>
+          <div class="help">
+            <p class="help__text">need help?</p>
+            <p class="help__phone"><span>Call:</span> 0203 451 2688</p>
+          </div>
+          <section class="hot">
+            <h6 class="section-title">hot tours</h6>
+            <article class="hot__offer"><img src="img/aside1.png" class="hot__offer-img">
+              <h6 class="hot__offer-title stars-4">Mandisur Apartments</h6>
+              <p class="hot__where">in Sharm El Sheikh, Egypt</p>
+              <p class="hot__food">SELF CATERING FROM</p>
+              <p class="hot__price">£ 306 <span>pp</span><a href="#" title="view more" class="hot__offer-more">View details</a></p>
+            </article>
+            <article class="hot__offer"><img src="img/aside2.png" class="hot__offer-img">
+              <h6 class="hot__offer-title stars-5">The Hyatt Regency Sharm El Sheikh</h6>
+              <p class="hot__where">in Sharm El Sheikh, Egypt</p>
+              <p class="hot__food">BED AND BREAKFAST FROM</p>
+              <p class="hot__price">£ 427 <span>pp</span><a href="#" title="view more" class="hot__offer-more">View details</a></p>
+            </article>
+            <article class="hot__offer"><img src="img/aside3.png" class="hot__offer-img">
+              <h6 class="hot__offer-title stars-5">Gran Hotel Bahia Del Duque</h6>
+              <p class="hot__where">in Costa Adeje, Spain</p>
+              <p class="hot__food">BED AND BREAKFAST FROM</p>
+              <p class="hot__price">£ 494 <span>pp</span><a href="#" title="view more" class="hot__offer-more">View details</a></p>
+            </article><a href="#" class="hot__view-all">view all hot tours</a>
+          </section>
+        </aside>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__logo-wrap"><img src="img/logo_footer.png" class="logo_footer">
+          <p class="footer__text">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit aadipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="footer__section_about">
+          <h6 class="footer__title">about us</h6>
+          <ul class="footer__about">
+            <li class="footer__item"><a href="#" class="footer__link">About Us</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Privacy Policy</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">FAQs</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Terms of Business</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Sitemap</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Jobs</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Holiday Extras</a></li>
+          </ul>
+        </div>
+        <div class="footer__section_holidays">
+          <h6 class="footer__title">holidays</h6>
+          <ul class="footer__holidays">
+            <li class="footer__item"><a href="#" class="footer__link">All Inclusive Holidays</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Cheap Holidays</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Family Holidays</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Last Minute Holidays</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Luxury Holidays</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Summer Holidays</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Winter Sun Holidays</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Self Catering Holidays</a></li>
+          </ul>
+        </div>
+        <div class="footer__section_destinations">
+          <h6 class="footer__title">top destinations</h6>
+          <ul class="footer__holidays">
+            <li class="footer__item"><a href="#" class="footer__link">Costa Dorada</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Dalaman</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Fuerteventura</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Gran Canaria</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Ibiza</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Lanzarote</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Majorca</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Malta</a></li>
+          </ul>
+        </div>
+        <div class="footer__section_follow">
+          <h6 class="footer__title">follow us</h6>
+          <p class="footer__text">Connect with us for exclusive content, competitions and holiday inspiration</p>
+          <ul class="socials">
+            <li class="socials__item"><a href="#" class="socials__link_fb"></a></li>
+            <li class="socials__item"><a href="#" class="socials__link_tw"></a></li>
+            <li class="socials__item"><a href="#" class="socials__link_goo"></a></li>
+            <li class="socials__item"><a href="#" class="socials__link_yt"></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <footer class="copyrights">
+      <div class="copyrights__inner">
+        <p class="copyrights__text">© 2015 Tours4you. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+  <script src="js/app.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+</html>

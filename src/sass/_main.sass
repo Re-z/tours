@@ -1,0 +1,501 @@
+
+//header section
+.header
+	height: 90px
+	+flex(space-around, center)
+	+min-width
+
+.nav
+	+flex(center, center)
+	&__item
+		+lato
+		font-weight: 300
+		font-size: 14px
+		margin-right: 35px
+		&:last-of-type
+			margin-right: 0
+		&.cruises
+			align-self: flex-start
+
+	&__link
+		display: inline-block
+		text-decoration: none
+		color: inherit
+		&.is-active
+			color: $orange
+		&:hover
+			@extend .nav__link.is-active
+
+	//adding icons to nav menu
+	$icons: (holidays, cruises, flights, deals, destinations, estras)
+	@each $icon in $icons
+		.nav__link.#{$icon}:before
+			display: inline-block
+			content: ''
+			margin-right: 5px
+			vertical-align: middle
+			+s($icon)
+.search
+	+s(search)
+	display: inline-block
+	cursor: pointer
+	margin-right: 15px
+.profile
+	+s(profile)
+	display: inline-block
+	cursor: pointer
+//end header
+//start country
+.country
+	height: 236px
+	background: url("../img/greece.png") center center no-repeat
+	background-size: cover
+	border-bottom: 5px solid $orange
+	+min-width
+	&__inner
+		+inner
+		padding-top: 58px
+		+flex(space-between)
+		flex-wrap: wrap
+	&__name
+		font-size: 80px
+		font-weight: bold
+		text-align: center
+		color: $white
+		width: 100%
+		+montser
+	&__offers
+		+flex(space-between)
+		width: 580px
+		margin-left: 20px
+		margin-top: 19px
+		&-item
+			background: $orange
+			color: $white
+			&.is-active
+				background: $white
+				color: $orange
+				border-bottom: 5px solid $white
+			&:hover
+				@extend .country__offers-item.is-active
+		&-link
+			color: inherit
+			font-size: 14px
+			+montser
+			font-weight: bold
+			text-decoration: none
+			display: block
+			text-align: center
+			text-transform: uppercase
+			width: 112px
+			height: 42px
+			line-height: 42px
+
+.saved
+	background: rgba(0, 0, 0, .5)
+	width: 218px
+	height: 37px
+	text-align: center
+	align-self: flex-end
+	margin-bottom: 5px //border margin
+	+flex(space-around, center)
+	padding: 0 10px 0 10px
+	&__ico
+		display: inline-block
+		+s(heart-yellow)
+	&__text
+		font-size: 14px
+		+montser
+		color: $white
+
+//end country
+//start searchbar
+.searchbar
+	&__inner
+		+inner
+		padding: 30px 20px 28px 20px
+		+flex(space-between)
+	&__from
+		width: 220px
+		height: 60px
+		line-height: 60px
+		background: $lightGray
+		color: $darkGray
+		font-size: 16px
+		+lato
+		padding: 0 0 0 19px
+		position: relative
+
+		&:before
+			display: block
+			content: ''
+			position: absolute
+			right: 20px
+			+s(arrow-down-small)
+			top: 50%
+			margin-top: -3px
+	&__to
+		@extend .searchbar__from
+	&__date
+		width: 220px
+		height: 60px
+		position: relative
+		z-index: 1
+		&:before
+			content: ''
+			display: block
+			+s(date)
+			right: auto
+			left: 20px
+			position: absolute
+			z-index: 1
+			top: 50%
+			margin-top: -9px
+	&__duration
+		@extend .searchbar__from
+	&__edit
+		@extend .searchbar__from
+		width:  171px
+		background: $orange
+		color: $white
+		text-transform: uppercase
+		padding: 0
+		&:before
+			display: none
+	&__select
+		position: absolute
+		width: 100%
+		height: 100%
+		opacity: 0
+		left: 0
+		top: 0
+		background: inherit
+		font-family: inherit
+		font-size: inherit
+		color: inherit
+		cursor: pointer
+
+
+//jquery-ui datepicker
+#datepicker
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	@extend .searchbar__from
+	padding: 0 0 0 47px
+	cursor: pointer
+	&::-webkit-input-placeholder
+		color: $darkGray
+
+
+
+//end searchbar
+//start main
+.main
+	position: relative
+	padding-top: 8px
+	+min-width
+	&:before
+		width: 100%
+		display: block
+		content: ''
+		height: 125px
+		background: $lightGray
+		position: absolute
+		top: 0
+		z-index: -1
+	&__inner
+		+inner
+		padding-top: 10px
+		+flex(space-between)
+
+.hint
+	color: $purple
+	background: $yellow
+	+lato
+	text-align: center
+	font-size: 14px
+	min-height: 40px
+	line-height: 40px
+	position: relative
+	transition: 1s
+	+min-width
+	& span
+		font-weight: bold
+	&__close
+		display: block
+		+s(close)
+		position: absolute
+		right:  30px
+		top: 50%
+		margin-top: -10px
+		cursor: pointer
+		+r(1170)
+			right: 10px
+//start description
+.description
+	position: relative
+	width: 770px
+	&__tabs
+		+clr
+		margin-bottom: 20px
+		&-item
+			float: left
+			border-right: 1px solid $lightGray
+			color: $darkGray
+			&.is-active
+				color: $orange
+			&:hover
+				@extend .description__tabs-item.is-active
+			&:last-of-type
+				border-right: none
+		&-link
+			text-decoration: none
+			width: 153px
+			height: 68px
+			line-height: 68px
+			text-transform: uppercase
+			text-align: center
+			background: $white
+			color: inherit
+			+montser
+			font-size: 14px
+			font-weight: bold
+			display: block
+	&__text
+		font-size: 14px
+		width: 620px
+		font-weight: 300
+		color: $textColor
+		+lato
+		margin-top: 20px
+		&-title
+			font-size: 15px
+			font-weight: 700
+			letter-spacing: -.4px
+		&-wrap
+			margin-top: 17px
+			position: relative
+
+.media
+	position: absolute
+	top: 5px
+	right: 0
+	&__gallery
+		display: block
+		text-decoration: none
+		width: 135px
+		height: 60px
+		border: 1px dashed orange
+		font-size: 13px
+		font-weight: 700
+		text-align: center
+		color: $orange
+		margin-bottom: 10px
+		&:before
+			display: block
+			content: ''
+			+s(gallery-bg)
+			position: relative
+			left: 50%
+			margin: 10px 0 5px -12px
+	&__video
+		@extend .media__gallery
+		border-color: $middleGray
+		color: $textColor
+		margin-bottom: 0
+		&:before
+			@extend .media__gallery:before
+			+s(video-bg)
+
+.save
+	@extend .description__tabs-link
+	text-transform: uppercase
+	position: absolute
+	right: -195px
+	top: 0
+	cursor: pointer
+	width: 175px
+	text-align: right
+	background: $lightGray
+	height: 30px
+	line-height: 30px
+	margin-top: 20px
+	color: $darkGray
+	&:hover
+		@extend .description__tabs-item.is-active
+	&:before
+		display: block
+		content: ''
+		+s(heart-red)
+		left: 0
+		top: 50%
+		margin-top: -7px
+		position: absolute
+
+.box-title
+	text-transform: uppercase
+	font-size: 25px
+	font-weight: 400
+	+montser
+	&_hotel
+		@extend .box-title
+		position: relative
+		display: inline
+		&:after
+			display: block
+			content: ''
+			position: absolute
+			+s(stars-4)
+			top: 50%
+			margin-top: -7px
+			right: -75px
+.breadcrumbs
+	+flex(flex-start)
+	margin-top: 5px
+	&__item
+		margin-right: 13px
+		position: relative
+		&:after
+			display: block
+			content: '>'
+			position: absolute
+			right: -10px
+			top: 4px
+			color: $orange
+		&:last-of-type:after
+			display: none
+	&__link
+		font-size: 15px
+		+lato
+		color:  $middleGray
+		text-decoration: none
+
+//start slider-main
+.slider-main
+	&__wrap
+		height: 487px
+		margin-top: 17px
+	&__item
+		display: block
+		width: 100%
+
+//styles for slider
+.slick-prev,.slick-next
+	position: absolute
+	top: 50%
+	margin-top: -20px
+	+hide-text
+	width: 40px
+	height: 40px
+	background: rgba(255,255,255, .9)
+	left: 0
+	z-index: 1
+	&:focus
+		outline: none
+	&.slick-disabled
+		opacity: 0.2
+	&:before
+		content: ""
+		display: inline-block
+		vertical-align: middle
+		font-size: 15px
+		color: #fff
+		background: url("../img/slider-arrow-left.png") //+s doesnt work
+		width: 9px //+s doesnt work
+		height: 14px //+s doesnt work
+
+.slick-next
+	right: 0
+	left: auto
+	&:before
+		content: ""
+		display: inline-block
+		+s(slider-arrow-right)
+
+//slider sec
+.slider-sec
+	&__wrap
+		margin-top: 15px
+	&__item
+		width: 84px
+		height: 54px
+		margin-right: 12px
+
+//google map
+#map
+	height: 360px
+	margin-top: 30px
+
+.facilities
+	margin-top: 23px
+
+.section-title
+	+montser
+	font-size: 25px
+	font-weight: 400
+	color: $sectionTitleColor
+	text-transform: uppercase
+	position: relative
+	&__more
+		color: $orange
+		position: absolute
+		right: 0
+		text-transform: none
+		font-size: 15px
+		font-weight: bold
+		line-height: 35px
+		text-decoration: none
+
+.articles-wrap
+	+flex(space-between)
+	flex-wrap: wrap
+	margin-top: 25px
+.article
+	width: 370px
+	margin-bottom: 22px
+	&:nth-last-child(1),&:nth-last-child(2)
+		margin-bottom: 0
+
+	&__img
+		height: 200px
+		width: 370px
+		margin-bottom: 10px
+	&__title
+		text-transform: uppercase
+		+lato
+		font-size: 15px
+		font-weight: bold
+		&_to-do
+			@extend .article__title
+			text-transform: none
+	&__text
+		+lato
+		font-size: 14px
+		font-weight: 300
+		line-height: 20px
+		&.margin_20
+			margin-top: 20px
+	&__more
+		color: $orange
+		text-transform: uppercase
+		font-weight: 400
+		text-decoration: none
+		+lato
+		margin-top: 16px
+		display: block
+		font-size: 14px
+.rooms
+	margin-top: 20px
+.to-do
+	margin-top: 17px
+
+
+
+
+
+
+
+

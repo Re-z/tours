@@ -1,0 +1,212 @@
+$icons: (0:0)
+$icons: map-merge($icons,(arrow-down-small: (X: -99px, Y:-183px, W: 10px, H: 7px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(bed: (X: -28px, Y:-183px, W: 16px, H: 14px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(calendar: (X: -20px, Y:-201px, W: 16px, H: 16px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(close: (X: -239px, Y:-95px, W: 20px, H: 20px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(cruises: (X: 0px, Y:-183px, W: 24px, H: 14px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(date: (X: -239px, Y:-123px, W: 17px, H: 19px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(deals: (X: -239px, Y:-67px, W: 18px, H: 24px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(destinations: (X: -183px, Y:-149px, W: 24px, H: 22px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(easyJet: (X: -183px, Y:0px, W: 78px, H: 27px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(estras: (X: -211px, Y:-123px, W: 24px, H: 22px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(flights: (X: -183px, Y:-95px, W: 24px, H: 24px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(food: (X: -239px, Y:-149px, W: 16px, H: 16px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(gallery-bg: (X: -183px, Y:-123px, W: 24px, H: 22px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(heart-red: (X: -48px, Y:-183px, W: 15px, H: 14px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(heart-yellow: (X: -67px, Y:-183px, W: 15px, H: 14px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(help-bg: (X: 0px, Y:0px, W: 179px, H: 179px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(holidays: (X: -211px, Y:-95px, W: 24px, H: 24px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(plane: (X: 0px, Y:-201px, W: 16px, H: 16px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(profile: (X: -211px, Y:-67px, W: 24px, H: 24px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(search: (X: -183px, Y:-67px, W: 24px, H: 24px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(slider-arrow-left: (X: -86px, Y:-183px, W: 9px, H: 14px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(slider-arrow-right: (X: -248px, Y:-49px, W: 9px, H: 14px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(stars-4: (X: -183px, Y:-49px, W: 61px, H: 14px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(stars-5: (X: -183px, Y:-31px, W: 77px, H: 14px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(video-bg: (X: -211px, Y:-149px, W: 24px, H: 18px, TW: 261px, TH: 217px, IMG: '../img/icons.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+	$icon: map-get($icons, $icon)
+	@return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	width: icon-attr($iconName, W)
+	height: icon-attr($iconName, H)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	$width: icon-attr($iconName, W)
+	$height: icon-attr($iconName, H)
+	width: $width/2
+	height: $height/2
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+	$tw: icon-attr($iconName, TW) 	
+	$th: icon-attr($iconName, TH)
+	background-size: $tw/2 $th/2  	
+
+
+@mixin s($i)
+	+sprite($i)
+@mixin sp($i)
+	+sprite-position($i)
+@mixin sr($i)
+	+sprite-retina($i)	
+
+//
+//.icon-arrow-down-small
+//	width: 10px
+//	height: 7px
+//	background-image: url('../img/icons.png')
+//	background-position: -99px -183px
+//
+//.icon-bed
+//	width: 16px
+//	height: 14px
+//	background-image: url('../img/icons.png')
+//	background-position: -28px -183px
+//
+//.icon-calendar
+//	width: 16px
+//	height: 16px
+//	background-image: url('../img/icons.png')
+//	background-position: -20px -201px
+//
+//.icon-close
+//	width: 20px
+//	height: 20px
+//	background-image: url('../img/icons.png')
+//	background-position: -239px -95px
+//
+//.icon-cruises
+//	width: 24px
+//	height: 14px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -183px
+//
+//.icon-date
+//	width: 17px
+//	height: 19px
+//	background-image: url('../img/icons.png')
+//	background-position: -239px -123px
+//
+//.icon-deals
+//	width: 18px
+//	height: 24px
+//	background-image: url('../img/icons.png')
+//	background-position: -239px -67px
+//
+//.icon-destinations
+//	width: 24px
+//	height: 22px
+//	background-image: url('../img/icons.png')
+//	background-position: -183px -149px
+//
+//.icon-easyJet
+//	width: 78px
+//	height: 27px
+//	background-image: url('../img/icons.png')
+//	background-position: -183px 0px
+//
+//.icon-estras
+//	width: 24px
+//	height: 22px
+//	background-image: url('../img/icons.png')
+//	background-position: -211px -123px
+//
+//.icon-flights
+//	width: 24px
+//	height: 24px
+//	background-image: url('../img/icons.png')
+//	background-position: -183px -95px
+//
+//.icon-food
+//	width: 16px
+//	height: 16px
+//	background-image: url('../img/icons.png')
+//	background-position: -239px -149px
+//
+//.icon-gallery-bg
+//	width: 24px
+//	height: 22px
+//	background-image: url('../img/icons.png')
+//	background-position: -183px -123px
+//
+//.icon-heart-red
+//	width: 15px
+//	height: 14px
+//	background-image: url('../img/icons.png')
+//	background-position: -48px -183px
+//
+//.icon-heart-yellow
+//	width: 15px
+//	height: 14px
+//	background-image: url('../img/icons.png')
+//	background-position: -67px -183px
+//
+//.icon-help-bg
+//	width: 179px
+//	height: 179px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px 0px
+//
+//.icon-holidays
+//	width: 24px
+//	height: 24px
+//	background-image: url('../img/icons.png')
+//	background-position: -211px -95px
+//
+//.icon-plane
+//	width: 16px
+//	height: 16px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -201px
+//
+//.icon-profile
+//	width: 24px
+//	height: 24px
+//	background-image: url('../img/icons.png')
+//	background-position: -211px -67px
+//
+//.icon-search
+//	width: 24px
+//	height: 24px
+//	background-image: url('../img/icons.png')
+//	background-position: -183px -67px
+//
+//.icon-slider-arrow-left
+//	width: 9px
+//	height: 14px
+//	background-image: url('../img/icons.png')
+//	background-position: -86px -183px
+//
+//.icon-slider-arrow-right
+//	width: 9px
+//	height: 14px
+//	background-image: url('../img/icons.png')
+//	background-position: -248px -49px
+//
+//.icon-stars-4
+//	width: 61px
+//	height: 14px
+//	background-image: url('../img/icons.png')
+//	background-position: -183px -49px
+//
+//.icon-stars-5
+//	width: 77px
+//	height: 14px
+//	background-image: url('../img/icons.png')
+//	background-position: -183px -31px
+//
+//.icon-video-bg
+//	width: 24px
+//	height: 18px
+//	background-image: url('../img/icons.png')
+//	background-position: -211px -149px
+//

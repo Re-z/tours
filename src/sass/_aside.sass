@@ -1,0 +1,225 @@
+
+.aside
+	width: 370px
+	margin-top: 165px
+.all-inclusive
+	height: 82px
+	background: $yellow
+	+flex(space-between,center)
+	padding: $asidePadding
+	&__text
+		font-size: 14px
+		line-height: 20px
+		+lato
+		color: $purple
+		&-wrap
+			width: 145px
+	&__price
+		font-size: 30px
+		+montser
+		color: $purple
+		font-weight: bold
+		& span
+			font-size: 17px
+			position: relative
+			top: -10px
+.check-prices
+	display: block
+	width: 157px
+	height: 43px
+	line-height: 43px
+	background: $purple
+	color: $white
+	font-size: 15px
+	+montser
+	text-transform: uppercase
+	text-align: center
+	text-decoration: none
+
+.offer
+	padding-bottom: 30px
+	box-shadow: $asideBoxShadow
+	&__header
+		height: 210px
+		background: $lightGray
+		padding: $asidePadding
+		padding-top: 10px
+		position: relative
+	&__item
+		+lato
+		font-size: 15px
+		display: inline-block
+		color: $darkGray
+		&.calendar
+			font-weight: bold
+		&.plane
+			margin-top: 17px
+		&.bed
+			margin-top: 5px
+		&.food
+			margin-top: 5px
+		& span
+			color: $orange
+	&__link
+		display: block
+		color: $orange
+		margin-top: 3px
+		margin-left: 23px
+		&-arrow
+			margin-left: 4px
+	&__argument
+		background: $white
+		padding: $asidePadding
+		&-title
+			font-weight: 400
+			+montser
+			font-size: 25px
+			text-transform: uppercase
+			color: $sectionTitleColor
+			+montser
+			margin-top: 18px
+			margin-bottom: 17px
+
+//adding icons to .offer__item
+$offerIcons: 'calendar', 'plane', 'bed', 'food'
+@each $icon in $offerIcons
+	.offer__item.#{$icon}:before
+		display: inline-block
+		content: ''
+		margin-right: 8px
+		+s($icon)
+.easy-jet
+	position: absolute
+	top: 50px
+	right: 20px
+	display: block
+	+s(easyJet)
+
+.offer__glance
+	&-item
+		+lato
+		font-size: 14px
+		color: $textColor
+		display: inline-block
+		padding-right: 30px
+	&-ico
+		margin-right: 13px
+		vertical-align: text-top
+.offer__location
+	&-item
+		@extend .offer__glance-item
+		&:nth-of-type(2)
+			width: 308px
+			display: inline-block
+	&-ico
+		@extend .offer__glance-ico
+		&:nth-of-type(2)
+			position: relative
+			top: -18px
+
+.weather
+	width: 370px
+	height: 314px
+	background: url("../img/weather.png") no-repeat center center
+	margin-top: 30px
+.help
+	height: 125px
+	position: relative
+	margin-top: 31px
+	background: url("../img/help-bg.png") no-repeat center center
+	padding: $asidePadding
+	padding-top: 32px
+	border: 5px solid rgba(255,255,255, .2)
+	&:before
+		display: block
+		content: ''
+		position: absolute
+		right:  5px
+		top: 12px
+		+s(help-bg)
+	&__text
+		text-transform: uppercase
+		color: $white
+		font-size: 25px
+		+montser
+	&__phone
+		@extend .help__text
+		font-size: 30px
+		position: relative
+		top: -12px
+		& span
+			font-size: 25px
+			text-transform: none
+
+.hot
+	padding: $asidePadding
+	padding-top: 20px
+	padding-bottom: 15px
+	margin-top: 32px
+	box-shadow: $asideBoxShadow
+	&__offer
+		margin-top: 22px
+		padding-bottom: 11px
+		border-bottom: $articleBorder
+		&-img
+			margin-bottom: 7px
+		&-title
+			+lato
+			font-weight: bold
+			font-size: 15px
+			color: $textColor
+			position: relative
+			display: inline
+			&.stars-4
+				&:after
+					display: block
+					content: ''
+					+s(stars-4)
+					position: absolute
+					right: -72px
+					top: 3px
+			&.stars-5
+				&:after
+					@extend .hot__offer-title.stars-4
+					+s(stars-5)
+					right: -83px
+		&-more
+			@extend .section-title__more
+
+	&__where
+		+lato
+		color: $textColor
+		font-size: 14px
+	&__food
+		@extend .hot__where
+		font-size: 13px
+		text-transform: uppercase
+		margin-top: 11px
+	&__price
+		color: $purple
+		font-size: 25px
+		+montser
+		font-weight: bold
+		position: relative
+		& span
+			font-size: 13px
+			position: relative
+			top: -10px
+	&__view-all
+		color: $purple
+		text-transform: uppercase
+		+montser
+		font-size: 15px
+		font-weight: bold
+		text-align: center
+		display: block
+		text-decoration: none
+		margin-top: 15px
+
+
+
+
+
+
+
+
